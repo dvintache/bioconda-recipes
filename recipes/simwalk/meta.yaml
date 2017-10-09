@@ -1,0 +1,35 @@
+package:
+  name: simwalk2
+  version: "2.91"
+
+  source:
+  fn: SimWalk2-2.91-lin.tar.gz # [linux]
+  url: http://www.genetics.ucla.edu/software/download?file=71 # [linux]
+  md5: 2a529d50ca48cd7ea2b67f85c290f203 # [linux]
+
+  #fn: SimWalk2-2.91-osx.tar.gz # [osx]
+  #url: http://www.genetics.ucla.edu/software/download?file=72 # [osx]
+  #md5: 157cf4a869afdacf8e415005886f27c7 # [osx]
+
+  
+build:
+  number: 0
+
+requirements:
+  build:
+    - libgfortran # [linux]
+    - libgcc # [linux]                                                                                                                                    
+  run:                                                                                                                                                
+    - libgfortran # [linux]
+    - libgcc # [linux]
+    - zlib # [linux]
+
+test:
+  commands:
+    #- cp BATCH-11.DAT BATCH2.DAT
+    - simwalk 
+    
+about:
+  home: http://www.genetics.ucla.edu/software/
+  license: INDIVIDUAL
+  summary: Stochastic Statistical Analysis of Qualitative Traits
